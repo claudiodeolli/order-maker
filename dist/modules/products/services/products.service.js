@@ -31,6 +31,19 @@ let ProductService = class ProductService {
     async deleteProduct(where) {
         return this.productRepositoryService.deleteProduct(where);
     }
+    async updateProductsMass(dto) {
+        const updatePromises = dto.products.map((product) => this.productRepositoryService.updateProduct({
+            where: { id: product.id },
+            data: { status: product.status },
+        }));
+        return Promise.all(updatePromises);
+    }
+    async updateProductStatus(id, status) {
+        return this.productRepositoryService.updateProduct({
+            where: { id },
+            data: { status },
+        });
+    }
 };
 exports.ProductService = ProductService;
 exports.ProductService = ProductService = __decorate([

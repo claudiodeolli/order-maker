@@ -1,5 +1,6 @@
-import { Prisma, Product } from '@prisma/client';
+import { Prisma, Product, Status } from '@prisma/client';
 import { ProductRepositoryService } from '../repositories/products.repository';
+import { UpdateProductsStatusDto } from '../dtos/update-product-status-bulk.dto';
 export declare class ProductService {
     private productRepositoryService;
     constructor(productRepositoryService: ProductRepositoryService);
@@ -17,4 +18,6 @@ export declare class ProductService {
         data: Prisma.ProductUpdateInput;
     }): Promise<Product>;
     deleteProduct(where: Prisma.ProductWhereUniqueInput): Promise<Product>;
+    updateProductsMass(dto: UpdateProductsStatusDto): Promise<any>;
+    updateProductStatus(id: string, status: Status): Promise<Product>;
 }

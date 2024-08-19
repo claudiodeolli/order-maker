@@ -2,6 +2,12 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator kysely {
+  provider = "prisma-kysely"
+  output   = "../../client/src/generated"
+  fileName = "types.ts"
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -22,7 +28,7 @@ model Product {
   price      String
   status     Status
   user       User?    @relation(fields: [userId], references: [id])
-  userId     String
+  userId     String?
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 }
