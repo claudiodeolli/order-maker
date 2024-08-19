@@ -23,7 +23,7 @@ Order Maker é um projeto desenvolvido para gerenciar uma lista de pedidos com f
 
 ### Pré-requisitos
 
-- **Node.js:** Certifique-se de ter o Node.js instalado em sua máquina.
+- **Node.js na versão 20:** Certifique-se de ter o Node.js instalado em sua máquina.
 - **PostgreSQL:** Instale o PostgreSQL para gerenciar o banco de dados localmente.
 
 ### Passos para Configuração
