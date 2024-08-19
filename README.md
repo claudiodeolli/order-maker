@@ -74,7 +74,7 @@ Order Maker é um projeto desenvolvido para gerenciar uma lista de pedidos com f
 
    # No terminal do cliente
    cd ../client
-   npm dev
+   npm run dev
    ```
 
 6. **Acessar a Aplicação:**
