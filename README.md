@@ -31,7 +31,7 @@ Order Maker é um projeto desenvolvido para gerenciar uma lista de pedidos com f
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/order-maker.git
+   git clone git@github.com:claudiodeolli/order-maker.git
    ```
 
 2. **Instalação das Dependências:**
@@ -70,11 +70,11 @@ Order Maker é um projeto desenvolvido para gerenciar uma lista de pedidos com f
    ```bash
    # No terminal do servidor
    cd server
-   npm start
+   npm start:prod
 
    # No terminal do cliente
    cd ../client
-   npm start
+   npm dev
    ```
 
 6. **Acessar a Aplicação:**
